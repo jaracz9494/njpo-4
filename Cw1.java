@@ -11,11 +11,10 @@ import javax.swing.JOptionPane;
  *
  * @author Dominik
  */
-public class Cw1 extends javax.swing.JFrame {
+public class Cw1 extends javax.swing.JFrame { 
     
-    String imie = JOptionPane.showInputDialog("Podaj imie");
-    
-    
+    String imie = JOptionPane.showInputDialog("Podaj imie"); 
+      
 
     public Cw1() {
         initComponents();
@@ -71,9 +70,12 @@ public class Cw1 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        if (imie==null) {
+            imie="bezimienny";
+        }
         JOptionPane.showMessageDialog(this,"Witaj " + imie + " :)");
     }//GEN-LAST:event_jButton1MouseClicked
-
+   
     /**
      * @param args the command line arguments
      */
@@ -105,12 +107,15 @@ public class Cw1 extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            
             public void run() {
+                
                 new Cw1().setVisible(true);
             }
         });
     }
 
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     // End of variables declaration//GEN-END:variables
